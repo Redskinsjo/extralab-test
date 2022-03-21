@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { ClipLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
+import ECharts from "../components/echarts";
 
 import { fetchingActors, fetchedActors } from "../redux/features/actorsSlice";
 import data from "../assets/data.json";
-import Actor from "../components/actor-avatar";
+import Actor from "../components/actor-card";
 import Search from "../components/search";
 
 const Home = () => {
@@ -76,6 +77,7 @@ const Home = () => {
 
   return (
     <div>
+      {/* <ECharts /> */}
       <div className="h-[80px] flex justify-center items-center">
         <Search
           search={search}

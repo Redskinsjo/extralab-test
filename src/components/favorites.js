@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { ClipLoader } from "react-spinners";
 import { BsEmojiFrownFill } from "react-icons/bs";
 
-import Actor from "../components/actor-avatar";
+import Actor from "../components/actor-card";
 
 const Favorites = () => {
   const favActors = useSelector((state) => state.favActors.actors);
