@@ -2,7 +2,7 @@
 
 Clone the repo with:
 
-- ```git clone```
+- ```git clone https://github.com/Redskinsjo/extralab-test.git```
 
 ## Available Scripts
 
