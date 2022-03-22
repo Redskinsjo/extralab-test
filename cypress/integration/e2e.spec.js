@@ -27,8 +27,7 @@ describe("tests dom and page skeleton", () => {
   });
 
   it("checks hovering card then back visible", () => {
-    cy.wait(2000);
-    cy.get("[data-test=card]").eq(1).trigger("mouseover");
+    cy.get("[data-test=card]").eq(1).realHover();
     cy.get("[data-test=card-back]").eq(1).should("be.visible");
     cy.get("[data-test=from]").should("be.visible");
     cy.get("[data-test=phone]").should("be.visible");
@@ -62,8 +61,9 @@ describe("data", () => {
 
 describe("dynamic clicks", () => {
   it("checks adding card to favorites", () => {
+    // cy.get("[data-test=card]").eq(1).realHover();
     cy.get("[data-test=add-button]").eq(1).click({ force: true });
-    cy.wait(1000);
+    cy.wait(2000);
     cy.visit("/favorites");
     cy.get("[data-test=card]").should("have.length", 1);
   });
