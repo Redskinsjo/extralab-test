@@ -62,6 +62,9 @@ describe("data", () => {
 
 describe("dynamic clicks", () => {
   it("checks adding card to favorites", () => {
-    cy.get("[data-test=add-button]").click({ force: true });
+    cy.get("[data-test=add-button]").eq(1).click({ force: true });
+    cy.wait(1000);
+    cy.visit("/favorites");
+    cy.get("[data-test=card]").should("have.length", 1);
   });
 });

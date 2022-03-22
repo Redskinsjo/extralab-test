@@ -71,9 +71,7 @@ const ActorAvatar = ({ data: el, formatDate }) => {
                     "_blank"
                   )
                 }
-                inputProps={{
-                  "data-test": "more-button",
-                }}
+                data-test="more-button"
               >
                 More
               </Button>
@@ -84,9 +82,7 @@ const ActorAvatar = ({ data: el, formatDate }) => {
                   onClick={() => {
                     dispatch(addFavActor(el));
                   }}
-                  inputProps={{
-                    "data-test": "add-button",
-                  }}
+                  data-test="add-button"
                 >
                   Add to Favorite
                 </Button>
@@ -97,6 +93,7 @@ const ActorAvatar = ({ data: el, formatDate }) => {
                   onClick={() => {
                     dispatch(addFavActor(el));
                   }}
+                  data-test="add-button"
                 >
                   Add to Favorite
                 </Button>
